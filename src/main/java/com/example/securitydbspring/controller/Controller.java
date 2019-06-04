@@ -1,23 +1,15 @@
 package com.example.securitydbspring.controller;
 
-import com.example.securitydbspring.dao.CarsDAO;
 import com.example.securitydbspring.cars.Cars;
-import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.securitydbspring.dao.CarsDAO;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-
-
-@RestController
-@AllArgsConstructor
 public class Controller {
 
-
     public CarsDAO carsDAO;
-
+    
     @GetMapping("/")
     public String home(){
         return "you are at home";
@@ -45,4 +37,3 @@ public class Controller {
         return deleteId;
     }
 }
-
